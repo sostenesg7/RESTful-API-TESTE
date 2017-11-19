@@ -26,8 +26,8 @@ app.get('/dados', (req, res)=>{
 	var dados =  [
 		{value: 25, label: 'agua'},
 		{value: 40, label: 'energia'},
-		{value: 30, label: 'gas'},
-		{value: 5, label: 'internet'}
+		{value: 31, label: 'gas'},
+		{value: 4, label: 'internet'}
 		]
 	res.send(JSON.stringify(dados))
 })
