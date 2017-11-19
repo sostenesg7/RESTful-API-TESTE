@@ -15,7 +15,7 @@ var server = app.listen(process.env.PORT || porta, ()=>{
 })
 
 app.get('/',(req, res)=>{
-	res.send('API de testes')
+	res.send('API de testes - dev')
 })
 
 app.get('/grafico', (req, res) => {
