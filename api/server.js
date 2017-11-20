@@ -25,8 +25,7 @@ app.get('/grafico', (req, res) => {
 })
 
 app.get('/dados', (req, res) => {
-  var dados
-  dados = [
+  const dados = [
     {value: 25, label: 'agua'},
     {value: 40, label: 'energia'},
     {value: 30, label: 'gas'},
@@ -36,8 +35,7 @@ app.get('/dados', (req, res) => {
 })
 
 app.get('/random', (req, res) => {
-  var dados
-  dados = [
+  const dados = [
   {year: '2008', value: randVal(20)},
   {year: '2009', value: randVal(20)},
   {year: '2010', value: randVal(20)},
@@ -51,7 +49,7 @@ app.get('/admin', (req, res) => {
 })
 
 app.get('/random_unico', (req, res) => {
-  var dados = {
+  const dados = {
     year: '' + randVal(2000) + '', value: randVal(20)
   }
   res.send(JSON.stringify(dados))
