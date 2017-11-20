@@ -1,1 +1,0 @@
-Executar ssh: heroku ps:exec

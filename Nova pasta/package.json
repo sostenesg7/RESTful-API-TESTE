@@ -1,11 +1,11 @@
 {
-  "name": "dados",
+  "name": "RESTful-API-TESTE",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node api/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +13,6 @@
     "body-parser": "^1.18.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.16.2",
-    "mongoose": "^4.13.4",
-    "pug": "^2.0.0-rc.4"
+    "mongoose": "^4.13.4"
   }
 }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="PROJECT" libraries="{bootstrap-DefinitelyTyped, es6-promise-DefinitelyTyped, express-DefinitelyTyped, google-drive-realtime-api-DefinitelyTyped, google-maps-DefinitelyTyped, jQuery UI-1.10.2, jQuery-2.0.0, material-design-lite-DefinitelyTyped, material-ui-DefinitelyTyped, mongoose-DefinitelyTyped}" />
+    <includedPredefinedLibrary name="Node.js Core" />
+  </component>
+</project>

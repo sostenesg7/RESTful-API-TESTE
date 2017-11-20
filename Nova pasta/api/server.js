@@ -1,21 +1,21 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 var app = express()
-var porta = 3000
+var porta = 8080
 
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
-var dir = __dirname + '/public/'
-app.use('/static/' , express.static(dir))
+var dir = path.join(__dirname '/public/'
+app.use('/static/', express.static(dir))
 
-//console.log('dir: ' + __dirname + '/public/')
+//  console.log('dir: ' + __dirname + '/public/')
 
-var server = app.listen(porta, ()=>{
+var server = app.listen(process.env.PORT || porta, ()=>{
 	console.log('Server iniciado ' + server.address().address + server.address().port)
 })
 
 app.get('/',(req, res)=>{
-	res.send('API de testes')
+	res.send('API de testes - req')
 })
 
 app.get('/grafico', (req, res) => {

@@ -1,0 +1,55 @@
+
+<!doctype html>
+<head>
+  <script src="/static/scripts/js/jquery.min.js"></script>
+  <script src="/static/scripts/js/raphael-min.js"></script>
+  <script src="/static/scripts/js/morris.js"></script>
+  <script src="/static/scripts/js/graf.js"></script>
+  <script src="/static/scripts/js/prettify.min.js"></script>
+  <link rel="stylesheet" href="/static/scripts/css/graf.css">
+  <link rel="stylesheet" href="/static/scripts/css/prettify.min.css">
+  <link rel="stylesheet" href="/static/scripts/css/morris.css">
+  
+  <style>
+    body { background:#fff; }
+  </style>
+</head>
+
+<body>
+	<div id="graph"></div>
+	<div id="myfirstchart" style="height: 250px;"></div>
+	<script>
+		$.get("/dados", function(data, status){
+			Morris.Donut({
+				element: 'graph',
+				data: JSON.parse(data),
+				backgroundColor: '#ccc',
+				labelColor: '#060',
+				colors: ['#0BA462','#39B580','#67C69D','#95D7BB'
+				],
+				formatter: function (x) { return x + "%"}
+			})
+		})
+	</script>
+
+	<script>
+	var dad = []
+	var graf = Morris.Line({
+		element: 'myfirstchart',
+		data: dad,
+		xkey: 'year',
+		ykeys: ['value'],
+		labels: ['Value']
+	})				
+	
+	setInterval(()=>{
+		$.get("/random_unico", function(data, status){
+			
+			dad.push(JSON.parse(data))
+			graf.setData(dad)
+			//graph.setData(dados)
+		})
+	}, 1000)		
+	
+	</script>
+</body>
